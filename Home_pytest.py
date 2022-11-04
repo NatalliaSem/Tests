@@ -2,7 +2,7 @@ import pyodbc
 import pytest
 
 try:
-    connection = pyodbc.connect('DRIVER={SQL Server};Server=EPPLWARW01A1\\SQLEXPRESS;Database=TRN;username= testuser;password=**est')
+    connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};Server=EPPLWARW01A1\\SQLEXPRESS;Database=TRN;username= testuser;password=**est')
     print("There is connection to DB")
 except Exception as ex:
     print(ex)
