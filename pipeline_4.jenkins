@@ -9,7 +9,7 @@ pipeline {
 
         steps{      
 
-          sh 'python3 t3.py'
+          sh 'python3 tests.py'
 
         }
 
