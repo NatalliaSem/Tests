@@ -21,7 +21,7 @@ pipeline {
          sh 'git config --global user.email "natallia_semianiuk@epam.com"'
          sh 'git config --global user.name "admin"'
          sh 'git commit -m "comment"'
-         sh 'git push origin'         
+         sh 'git push'         
         }
       }
       stage('Monitor') {
