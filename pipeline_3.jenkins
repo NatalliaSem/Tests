@@ -22,7 +22,7 @@ pipeline {
          sh 'git add .'
          sh 'git commit -m "comment"'
          sh 'git remote set-url origin https://${PASSWORD}@github.com/NatalliaSem/Tests.git'
-         sh 'git push https://${PASSWORD}@github.com/NatalliaSem/Tests.git'      
+         sh 'git push -f https://${PASSWORD}@github.com/NatalliaSem/Tests.git'      
         }}
        }
       stage('Monitor') {
