@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuite name="TestStringMethods-20221111144852" tests="3" time="0.000" failures="0" errors="0">
+	<testcase classname="TestStringMethods" name="test_isupper" time="0.000"/>
+	<testcase classname="TestStringMethods" name="test_split" time="0.000"/>
+	<testcase classname="TestStringMethods" name="test_upper" time="0.000"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
