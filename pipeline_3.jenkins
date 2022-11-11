@@ -20,7 +20,7 @@ pipeline {
          sh 'git branch'
          sh 'git add .'
          sh 'git commit -m "comment"'
-         sh 'git push  origin main https://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@github.com/NatalliaSem/Tests.git'         
+         sh 'git push  origin pre-prod https://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@github.com/NatalliaSem/Tests.git'         
         }
       }
       stage('Monitor') {
