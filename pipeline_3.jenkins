@@ -17,6 +17,7 @@ pipeline {
         steps {
          sh 'git checkout pre-prod'
          sh 'git merge main'
+         sh 'git branch'
          sh 'git add .'
          sh 'git commit -m "comment"'
          sh 'git push origin pre-prod'         
