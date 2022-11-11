@@ -15,7 +15,7 @@ pipeline {
       }
       stage('Deploy') {
         steps {
-         sh 'git checkout  pre-prod'
+         sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git add .'
          sh 'git config --global user.email "natallia_semianiuk@epam.com"'
