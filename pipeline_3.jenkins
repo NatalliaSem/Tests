@@ -4,7 +4,7 @@ pipeline {
    
       stage('Build') {
         steps {
-          git branch: 'main', url: 'https://github.com/NatalliaSem/Tests.git'
+          git branch: 'main', url: 'https://github.com/NatalliaSem/Tests'
         }
       }
       stage('Test runs') {
