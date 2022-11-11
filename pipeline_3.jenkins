@@ -19,7 +19,7 @@ pipeline {
          sh 'git merge main'
          sh 'git add .'
          sh 'git config --global user.email "natallia_semianiuk@gmail.com"'
-         sh 'git config --global user.name "natallia_semianiuk@gmail.com"'
+         sh 'git config --global user.name natallia_semianiuk@gmail.com'
          sh 'git commit -m "comment"'
          sh 'git push'         
         }
