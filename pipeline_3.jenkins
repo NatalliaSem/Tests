@@ -19,7 +19,7 @@ pipeline {
          sh 'git merge main'
          sh 'git add .'
          sh 'git commit -m "comment"'
-         sh 'git push origin pre-prod'         
+         sh 'git push origin'         
         }
       }
       stage('Monitor') {
