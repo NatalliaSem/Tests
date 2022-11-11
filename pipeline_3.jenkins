@@ -13,7 +13,7 @@ pipeline {
           sh 'python3 tests.py'
         }
       }
-      stage('Deploy') {
+      stage('Deploys') {
         steps {
          sh 'git checkout pre-prod'
          sh 'git merge main'
