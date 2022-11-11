@@ -15,15 +15,16 @@ pipeline {
       }
       stage('Deploys') {
         steps {
-         sh 'git checkout pre-prod'
+        withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+        sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git branch'
          sh 'git add .'
          sh 'git commit -m "comment"'
-         sh 'git remote set-url origin https://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@github.com/NatalliaSem/Tests.git'
-         sh 'git push https://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@github.com/NatalliaSem/Tests.git'         
-        }
-      }
+         sh 'git remote set-url origin https://${PASSWORD}@github.com/NatalliaSem/Tests.git'
+         sh 'git push https:/${PASSWORD}@github.com/NatalliaSem/Tests.git'      
+        }}
+       }
       stage('Monitor') {
      steps {
        echo 'Well done!'
