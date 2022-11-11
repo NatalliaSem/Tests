@@ -18,8 +18,10 @@ pipeline {
          sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git add .'
+         sh 'git config --global user.email "natallia_semianiuk@epam.com"'
+         sh 'git config --global user.name "admin"'
          sh 'git commit -m "comment"'
-         sh 'git push -u -f origin pre-prod'         
+         sh 'git push'         
         }
       }
       stage('Monitor') {
