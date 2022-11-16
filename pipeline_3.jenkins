@@ -7,22 +7,17 @@ pipeline {
           git branch: 'main', url: 'https://github.com/NatalliaSem/Tests'
         }
       }
-      stage('Approve') {
-                 steps {
-                    input('Do you want to proceed?')
-                 }
-                 }
-       stage('Testing') {          
+      stage('Testing') {          
          steps {
           echo 'Testing using tests'
           sh 'python3 tests.py'
                   }
       }
-      stage('Check branch') {
+      stage('Check branch main') {
             when {
              allOf {
                 expression {
-                    return env.GIT_BRANCH == "origin/pppp"
+                    return env.GIT_BRANCH == "origin/main"
                 }
             }
              }
