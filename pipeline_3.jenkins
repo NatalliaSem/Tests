@@ -24,6 +24,14 @@ pipeline {
           sh 'git branch'
                   }
       }
+      stage('Example Deploy') {
+            when {
+                branch 'production'
+            }
+            steps {
+                echo 'Deploying'
+            }
+        }
       stage('Deploys') {
         steps {
         withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
