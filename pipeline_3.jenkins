@@ -27,7 +27,7 @@ pipeline {
       stage('Example Deploy') {
             when {
                 expression {
-                    return env.GIT_BRANCH == "origin/main"
+                    return env.GIT_BRANCH == "origin/pre-prod"
                 }
             }
             steps {
