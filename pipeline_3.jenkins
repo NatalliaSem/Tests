@@ -7,13 +7,18 @@ pipeline {
           git branch: 'main', url: 'https://github.com/NatalliaSem/Tests'
         }
       }
-      stage('Two') {
+      stage('Approve') {
                  steps {
                     input('Do you want to proceed?')
                  }
                  }
-      stage('Test runs') {
-        steps {
+       stage('Check branch and test') {
+                 when {
+                       not {
+                            branch "master"
+                       }
+                 }           
+         steps {
           echo 'Testing using tests'
           sh 'python3 tests.py'
         }
