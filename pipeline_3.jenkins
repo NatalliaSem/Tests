@@ -22,20 +22,19 @@ pipeline {
             when {
              allOf {
                 expression {
-                    return env.GIT_BRANCH == "origin/main"
+                    return env.GIT_BRANCH == "origin/pppp"
                 }
             }
              }
             steps {
-                echo 'Deploying'
-                sh 'git checkout pre-prod'
-            }
+                input('Do you want to proceed?')
+                }
         }
       stage('Deploys') {
         steps {
         withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
         sh 'git checkout pre-prod'
-         sh 'git merge main'
+        sh 'git merge main'
          sh 'git branch'
          sh 'git add .'
          sh 'git commit -m "comment"'
