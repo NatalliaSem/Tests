@@ -12,17 +12,7 @@ pipeline {
                     input('Do you want to proceed?')
                  }
                  }
-       stage('check branch') {
-                 when {
-                       not {
-                            branch "ppppp"
-                       }
-                 }
-                 steps {
-                       echo "Go"
-                 }
-                 }
-         stage('Testing') {          
+       stage('Testing') {          
          steps {
           echo 'Testing using tests'
           sh 'python3 tests.py'
