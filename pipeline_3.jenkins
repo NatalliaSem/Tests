@@ -20,10 +20,12 @@ pipeline {
       }
       stage('Check branch') {
             when {
+             allOf {
                 expression {
                     return env.GIT_BRANCH == "origin/pre-prod"
                 }
             }
+             }
             steps {
                 echo 'Deploying'
                 sh 'git checkout pre-prod'
