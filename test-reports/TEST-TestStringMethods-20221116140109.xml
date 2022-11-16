@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<testsuite name="TestStringMethods-20221116140109" tests="3" time="0.001" failures="0" errors="1">
+	<testcase classname="TestStringMethods" name="test_isupper" time="0.000"/>
+	<testcase classname="TestStringMethods" name="test_split" time="0.000"/>
+	<testcase classname="TestStringMethods" name="test_upper" time="0.001">
+		<error type="AssertionError" message="'FOO' != 'foo'
+- FOO
++ foo
+"><![CDATA[Traceback (most recent call last):
+  File "/var/jenkins_home/workspace/test_test/tests.py", line 16, in test_upper
+    self.assertEqual('foo'.upper(), 'foo')
+AssertionError: 'FOO' != 'foo'
+- FOO
++ foo
+
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
