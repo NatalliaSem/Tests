@@ -18,13 +18,7 @@ pipeline {
           sh 'python3 tests.py'
                   }
       }
-       stage('branch') {          
-         steps {
-          echo 'Tgggg'
-          sh 'git branch'
-                  }
-      }
-      stage('Example Deploy') {
+      stage('Check branch') {
             when {
                 expression {
                     return env.GIT_BRANCH == "origin/pre-prod"
@@ -32,6 +26,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying'
+                sh 'git checkout pre-prod'
             }
         }
       stage('Deploys') {
