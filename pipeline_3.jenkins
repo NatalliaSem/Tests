@@ -22,7 +22,7 @@ pipeline {
             when {
              allOf {
                 expression {
-                    return env.GIT_BRANCH == "origin/pre-prod"
+                    return env.GIT_BRANCH == "origin/main"
                 }
             }
              }
