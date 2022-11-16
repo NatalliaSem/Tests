@@ -26,8 +26,7 @@ pipeline {
          steps {
           echo 'Testing using tests'
           sh 'python3 tests.py'
-          sh 'make check || true'
-        }
+                  }
       }
       stage('Deploys') {
         steps {
