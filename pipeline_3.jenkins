@@ -18,6 +18,11 @@ pipeline {
           sh 'python3 tests.py'
                   }
       }
+      stage('ch') {
+        steps {
+        withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+         sh 'git branch'
+                 }}
       stage('Deploys') {
         steps {
         withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
