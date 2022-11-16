@@ -22,7 +22,7 @@ pipeline {
             when {
              allOf {
                 expression {
-                    return env.GIT_BRANCH == "origin/main"
+                    return env.GIT_BRANCH == "origin/pppp"
                 }
             }
              }
@@ -34,7 +34,6 @@ pipeline {
       stage('Deploys') {
         steps {
         withCredentials([usernamePassword(credentialsId: 'test', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
-        sh 'git checkout pre-prod'
          sh 'git merge main'
          sh 'git branch'
          sh 'git add .'
